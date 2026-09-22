@@ -1,1 +1,211 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SourceMonitor — Privacy</title>
+<!--
+  GENERATA da tools/make-page.py: non modificare a mano.
+  La fonte sono i sei setup/documenti/privacy.*.txt, cioe' gli stessi testi che viaggiano nel pacchetto.
+  Pagina autonoma, senza fogli di stile esterni ne' tema Jekyll: il suo indirizzo sta
+  nella scheda del Microsoft Store e deve aprirsi anche se il tema del sito non compila.
+-->
+<style>
+  :root {
+    --paper: #f6f7f9; --plate: #ffffff; --ink: #16191f; --ink-soft: #4b5563;
+    --ink-faint: #69717d; --rule: #dfe3e8; --first: #1f6feb; --navy: #0e2a4f;
+    --sans: "Segoe UI Variable Text", "Segoe UI", system-ui, -apple-system, "Microsoft YaHei", sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper: #0f1622; --plate: #172131; --ink: #eef2f7; --ink-soft: #b3c0d1;
+      --ink-faint: #8d9bb0; --rule: #2a3a52; --first: #6ea8ff; --navy: #dbe7ff;
+    }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; padding: 2rem 1.25rem 4rem; background: var(--paper); color: var(--ink);
+         font-family: var(--sans); font-size: 1rem; line-height: 1.65; }
+  main { max-width: 46rem; margin: 0 auto; }
+  h1 { font-size: 1.6rem; margin: 0; color: var(--navy); letter-spacing: .01em; }
+  nav { margin: 1.25rem 0 0; padding: .9rem 0; border-top: 1px solid var(--rule);
+        border-bottom: 1px solid var(--rule); }
+  nav a { color: var(--first); text-decoration: none; margin-right: 1.1rem; display: inline-block; padding: .15rem 0; }
+  nav a:hover { text-decoration: underline; }
+  section { margin: 3rem 0 0; padding: 1.75rem 1.75rem .5rem; background: var(--plate);
+            border: 1px solid var(--rule); border-radius: .5rem; }
+  h2 { font-size: 1.15rem; margin: 0; color: var(--navy); letter-spacing: .03em; }
+  h3 { font-size: .95rem; margin: 2rem 0 .35rem; letter-spacing: .04em; color: var(--ink-soft); }
+  p { margin: .35rem 0 1.1rem; }
+  p.versione { color: var(--ink-faint); margin: .3rem 0 1.6rem; font-size: .95rem; }
+  strong { font-weight: 600; }
+  ul { margin: .35rem 0 1.1rem; padding-left: 1.2rem; }
+  li { margin: .3rem 0; }
+  code { font-family: Consolas, "Cascadia Mono", monospace; font-size: .92em; background: var(--paper);
+         border: 1px solid var(--rule); border-radius: .25rem; padding: 0 .25em; }
+  a { color: var(--first); }
+  @media (max-width: 34rem) { section { padding: 1.25rem 1.1rem .25rem; } }
+</style>
+</head>
+<body>
+<main>
+
+<h1>SourceMonitor — Privacy</h1>
+
+<nav>
+<a href="#it">Italiano</a>
+<a href="#en">English</a>
+<a href="#fr">Français</a>
+<a href="#es">Español</a>
+<a href="#de">Deutsch</a>
+<a href="#zh">中文</a>
+<a href="./">&larr; SourceMonitor</a>
+</nav>
+
+<section id="it" lang="it">
+<h2>INFORMATIVA SULLA PRIVACY</h2>
+<p class="versione">SourceMonitor — versione 1.4.0</p>
+<p>SourceMonitor non raccoglie e non conserva dati personali per conto del Titolare, e non gliene manda nessuno. Non contiene telemetria, non traccia l'uso, non richiede un account, non mostra pubblicità e non comunica con nessun server del Titolare, in nessuna configurazione.</p>
+<h3>CHE COSA ESCE DAL TUO COMPUTER</h3>
+<p>SourceMonitor si collega soltanto agli indirizzi che compaiono nelle liste che gli fornisci tu, e al server di posta che configuri tu. Nient'altro.</p>
+<ul>
+<li>Per ogni indirizzo delle liste il programma fa una normale richiesta web, come farebbe un browser. Il server che la riceve vede ciò che vede in ogni richiesta web: l'indirizzo IP della tua connessione, l'ora e l'identificativo del programma («SourceMonitor/1.0», modificabile nella scheda Pianificazione). Quali siano questi server lo decidi tu, scegliendo gli indirizzi da sorvegliare; a quello che ne fanno si applica l'informativa di ciascuno di loro.</li>
+<li>Se attivi gli avvisi via email, il programma invia al server di posta che hai indicato un riepilogo del controllo: quali fonti hanno un problema e perché. Il messaggio parte dal tuo account di posta verso i destinatari che scegli tu.</li>
+<li>Se scarichi i file delle liste nell'archivio locale, i file arrivano sul tuo computer dagli stessi indirizzi.</li>
+</ul>
+<h3>CHE COSA RESTA SUL TUO COMPUTER</h3>
+<p>Tutto ciò che il programma scrive sta nella sua cartella di lavoro (normalmente Documenti\SourceMonitor): le impostazioni, lo storico dei controlli, il registro, i report e l'archivio. Non esce da lì. La password del server di posta non è mai scritta in chiaro: è cifrata con DPAPI, il meccanismo di Windows legato al tuo account, e non è leggibile da un altro utente o da un altro computer. Puoi cancellare tutto in qualunque momento cancellando quella cartella.</p>
+<h3>ACQUISTO DAL MICROSOFT STORE</h3>
+<p>Se hai acquistato SourceMonitor dal Microsoft Store, i dati dell'acquisto e del pagamento li tratta Microsoft secondo la propria informativa. Il Titolare non li riceve.</p>
+<h3>IL CONTENUTO DELLE LISTE</h3>
+<p>Le liste le scrivi tu, e possono contenere quello che vuoi. Se vi inserisci dati personali — per esempio indirizzi che contengono nomi o credenziali — restano sul tuo computer e nei report, e vengono inviati soltanto ai server che quelle stesse righe indicano. Il consiglio è di non inserirne.</p>
+<h3>COMPONENTI DI TERZI</h3>
+<p>Il programma include il runtime Microsoft .NET, i cui testi di licenza viaggiano insieme al programma nella cartella Licenze. Non introduce telemetria in questo prodotto.</p>
+<h3>TITOLARE E CONTATTO</h3>
+<p>Rosario Viscardi (Vis-K) — <a href="mailto:vis-k@outlook.it">vis-k@outlook.it</a></p>
+<p>© 2026 Vis-K</p>
+</section>
+
+<section id="en" lang="en">
+<h2>PRIVACY POLICY</h2>
+<p class="versione">SourceMonitor — version 1.4.0</p>
+<p>SourceMonitor does not collect or keep personal data on behalf of the Licensor, and sends it none. It contains no telemetry, does not track usage, requires no account, shows no advertising and does not communicate with any server of the Licensor, in any configuration.</p>
+<h3>WHAT LEAVES YOUR COMPUTER</h3>
+<p>SourceMonitor connects only to the addresses that appear in the lists you give it, and to the mail server you configure. Nothing else.</p>
+<ul>
+<li>For each address in the lists the program makes an ordinary web request, as a browser would. The server that receives it sees what it sees in any web request: the IP address of your connection, the time and the program's identifier ("SourceMonitor/1.0", which you can change in the Schedule tab). Which servers these are is up to you, since you choose the addresses to watch; what they do with it is governed by each one's own privacy policy.</li>
+<li>If you turn on e-mail alerts, the program sends a summary of the check to the mail server you specified: which sources have a problem, and why. The message goes from your mail account to the recipients you choose.</li>
+<li>If you download the files in the lists to the local archive, the files come to your computer from those same addresses.</li>
+</ul>
+<h3>WHAT STAYS ON YOUR COMPUTER</h3>
+<p>Everything the program writes is in its working folder (normally Documents\SourceMonitor): the settings, the check history, the log, the reports and the archive. It does not leave from there. The mail server password is never written in clear text: it is encrypted with DPAPI, the Windows mechanism tied to your account, and cannot be read by another user or on another computer. You can delete everything at any time by deleting that folder.</p>
+<h3>PURCHASE FROM THE MICROSOFT STORE</h3>
+<p>If you bought SourceMonitor from the Microsoft Store, the purchase and payment data are processed by Microsoft under its own privacy statement. The Licensor does not receive them.</p>
+<h3>THE CONTENT OF THE LISTS</h3>
+<p>You write the lists, and they can contain anything you like. If you put personal data in them — for instance addresses containing names or credentials — it stays on your computer and in the reports, and is sent only to the servers those same lines point to. Our advice is not to put any there.</p>
+<h3>THIRD-PARTY COMPONENTS</h3>
+<p>The program includes the Microsoft .NET runtime, whose licence texts travel with the program in the Licenze folder. It adds no telemetry to this product.</p>
+<h3>CONTROLLER AND CONTACT</h3>
+<p>Rosario Viscardi (Vis-K) — <a href="mailto:vis-k@outlook.it">vis-k@outlook.it</a></p>
+<p>© 2026 Vis-K</p>
+</section>
+
+<section id="fr" lang="fr">
+<h2>POLITIQUE DE CONFIDENTIALITÉ</h2>
+<p class="versione">SourceMonitor — version 1.4.0</p>
+<p>SourceMonitor ne collecte ni ne conserve de données personnelles pour le compte du Concédant, et ne lui en envoie aucune. Il ne contient aucune télémétrie, ne suit pas l'utilisation, ne demande aucun compte, n'affiche aucune publicité et ne communique avec aucun serveur du Concédant, dans aucune configuration.</p>
+<h3>CE QUI SORT DE VOTRE ORDINATEUR</h3>
+<p>SourceMonitor se connecte uniquement aux adresses qui figurent dans les listes que vous lui fournissez, et au serveur de messagerie que vous configurez. Rien d'autre.</p>
+<ul>
+<li>Pour chaque adresse des listes, le programme effectue une requête web ordinaire, comme le ferait un navigateur. Le serveur qui la reçoit voit ce qu'il voit dans toute requête web : l'adresse IP de votre connexion, l'heure et l'identifiant du programme (« SourceMonitor/1.0 », modifiable dans l'onglet Planification). Le choix de ces serveurs vous appartient, puisque c'est vous qui choisissez les adresses à surveiller ; ce qu'ils en font relève de la politique de chacun d'eux.</li>
+<li>Si vous activez les alertes par courriel, le programme envoie au serveur de messagerie indiqué un résumé de la vérification : quelles sources ont un problème, et pourquoi. Le message part de votre compte de messagerie vers les destinataires que vous choisissez.</li>
+<li>Si vous téléchargez les fichiers des listes dans l'archive locale, ils arrivent sur votre ordinateur depuis ces mêmes adresses.</li>
+</ul>
+<h3>CE QUI RESTE SUR VOTRE ORDINATEUR</h3>
+<p>Tout ce que le programme écrit se trouve dans son dossier de travail (normalement Documents\SourceMonitor) : les paramètres, l'historique des vérifications, le journal, les rapports et l'archive. Rien n'en sort. Le mot de passe du serveur de messagerie n'est jamais écrit en clair : il est chiffré avec DPAPI, le mécanisme de Windows lié à votre compte, et ne peut être lu ni par un autre utilisateur ni sur un autre ordinateur. Vous pouvez tout effacer à tout moment en supprimant ce dossier.</p>
+<h3>ACHAT SUR LE MICROSOFT STORE</h3>
+<p>Si vous avez acheté SourceMonitor sur le Microsoft Store, les données d'achat et de paiement sont traitées par Microsoft selon sa propre déclaration de confidentialité. Le Concédant ne les reçoit pas.</p>
+<h3>LE CONTENU DES LISTES</h3>
+<p>C'est vous qui écrivez les listes, et elles peuvent contenir ce que vous voulez. Si vous y placez des données personnelles — par exemple des adresses contenant des noms ou des identifiants — elles restent sur votre ordinateur et dans les rapports, et ne sont envoyées qu'aux serveurs que ces mêmes lignes désignent. Notre conseil est de ne pas en mettre.</p>
+<h3>COMPOSANTS TIERS</h3>
+<p>Le programme inclut le runtime Microsoft .NET, dont les textes de licence accompagnent le programme dans le dossier Licenze. Il n'ajoute aucune télémétrie à ce produit.</p>
+<h3>RESPONSABLE ET CONTACT</h3>
+<p>Rosario Viscardi (Vis-K) — <a href="mailto:vis-k@outlook.it">vis-k@outlook.it</a></p>
+<p>© 2026 Vis-K</p>
+</section>
+
+<section id="es" lang="es">
+<h2>POLÍTICA DE PRIVACIDAD</h2>
+<p class="versione">SourceMonitor — versión 1.4.0</p>
+<p>SourceMonitor no recoge ni conserva datos personales por cuenta del Licenciante, y no le envía ninguno. No contiene telemetría, no rastrea el uso, no requiere una cuenta, no muestra publicidad y no se comunica con ningún servidor del Licenciante, en ninguna configuración.</p>
+<h3>QUÉ SALE DE SU ORDENADOR</h3>
+<p>SourceMonitor se conecta solo a las direcciones que aparecen en las listas que usted le proporciona, y al servidor de correo que usted configura. Nada más.</p>
+<ul>
+<li>Para cada dirección de las listas, el programa hace una solicitud web normal, como haría un navegador. El servidor que la recibe ve lo que ve en cualquier solicitud web: la dirección IP de su conexión, la hora y el identificador del programa («SourceMonitor/1.0», modificable en la pestaña Programación). Qué servidores son lo decide usted, al elegir las direcciones que vigilar; lo que hacen con ello se rige por la política de cada uno.</li>
+<li>Si activa los avisos por correo, el programa envía al servidor de correo indicado un resumen de la comprobación: qué fuentes tienen un problema y por qué. El mensaje sale de su cuenta de correo hacia los destinatarios que usted elige.</li>
+<li>Si descarga los archivos de las listas en el archivo local, llegan a su ordenador desde esas mismas direcciones.</li>
+</ul>
+<h3>QUÉ SE QUEDA EN SU ORDENADOR</h3>
+<p>Todo lo que escribe el programa está en su carpeta de trabajo (normalmente Documentos\SourceMonitor): la configuración, el historial de comprobaciones, el registro, los informes y el archivo. No sale de allí. La contraseña del servidor de correo nunca se escribe en claro: está cifrada con DPAPI, el mecanismo de Windows vinculado a su cuenta, y no puede leerla otro usuario ni otro ordenador. Puede borrarlo todo en cualquier momento borrando esa carpeta.</p>
+<h3>COMPRA EN MICROSOFT STORE</h3>
+<p>Si ha comprado SourceMonitor en Microsoft Store, los datos de la compra y del pago los trata Microsoft según su propia declaración de privacidad. El Licenciante no los recibe.</p>
+<h3>EL CONTENIDO DE LAS LISTAS</h3>
+<p>Las listas las escribe usted, y pueden contener lo que quiera. Si incluye en ellas datos personales — por ejemplo, direcciones que contienen nombres o credenciales — se quedan en su ordenador y en los informes, y solo se envían a los servidores que esas mismas líneas indican. Le aconsejamos no incluirlos.</p>
+<h3>COMPONENTES DE TERCEROS</h3>
+<p>El programa incluye el runtime de Microsoft .NET, cuyos textos de licencia acompañan al programa en la carpeta Licenze. No añade telemetría a este producto.</p>
+<h3>RESPONSABLE Y CONTACTO</h3>
+<p>Rosario Viscardi (Vis-K) — <a href="mailto:vis-k@outlook.it">vis-k@outlook.it</a></p>
+<p>© 2026 Vis-K</p>
+</section>
+
+<section id="de" lang="de">
+<h2>DATENSCHUTZERKLÄRUNG</h2>
+<p class="versione">SourceMonitor — Version 1.4.0</p>
+<p>SourceMonitor erhebt und speichert keine personenbezogenen Daten im Auftrag des Lizenzgebers und übermittelt ihm keine. Es enthält keine Telemetrie, verfolgt die Nutzung nicht, verlangt kein Konto, zeigt keine Werbung und kommuniziert in keiner Konfiguration mit einem Server des Lizenzgebers.</p>
+<h3>WAS IHREN COMPUTER VERLÄSST</h3>
+<p>SourceMonitor verbindet sich nur mit den Adressen, die in den Listen stehen, die Sie ihm geben, und mit dem Mailserver, den Sie einrichten. Mit nichts sonst.</p>
+<ul>
+<li>Für jede Adresse der Listen stellt das Programm eine gewöhnliche Webanfrage, wie es ein Browser tun würde. Der empfangende Server sieht, was er bei jeder Webanfrage sieht: die IP-Adresse Ihrer Verbindung, die Uhrzeit und die Kennung des Programms („SourceMonitor/1.0“, im Reiter Zeitplan änderbar). Welche Server das sind, bestimmen Sie, indem Sie die zu überwachenden Adressen wählen; was diese damit tun, regelt jeweils deren eigene Datenschutzerklärung.</li>
+<li>Wenn Sie E-Mail-Benachrichtigungen einschalten, sendet das Programm an den angegebenen Mailserver eine Zusammenfassung der Prüfung: welche Quellen ein Problem haben und warum. Die Nachricht geht von Ihrem Mailkonto an die Empfänger, die Sie wählen.</li>
+<li>Wenn Sie die Dateien der Listen in das lokale Archiv herunterladen, kommen sie von denselben Adressen auf Ihren Computer.</li>
+</ul>
+<h3>WAS AUF IHREM COMPUTER BLEIBT</h3>
+<p>Alles, was das Programm schreibt, liegt in seinem Arbeitsordner (normalerweise Dokumente\SourceMonitor): die Einstellungen, der Prüfverlauf, das Protokoll, die Berichte und das Archiv. Nichts davon verlässt diesen Ordner. Das Passwort des Mailservers wird nie im Klartext gespeichert: es ist mit DPAPI verschlüsselt, dem an Ihr Konto gebundenen Windows-Mechanismus, und kann weder von einem anderen Benutzer noch auf einem anderen Computer gelesen werden. Sie können jederzeit alles löschen, indem Sie diesen Ordner löschen.</p>
+<h3>KAUF IM MICROSOFT STORE</h3>
+<p>Wenn Sie SourceMonitor im Microsoft Store gekauft haben, verarbeitet Microsoft die Kauf- und Zahlungsdaten nach seiner eigenen Datenschutzerklärung. Der Lizenzgeber erhält sie nicht.</p>
+<h3>DER INHALT DER LISTEN</h3>
+<p>Die Listen schreiben Sie selbst, und sie können enthalten, was Sie möchten. Tragen Sie personenbezogene Daten ein — etwa Adressen, die Namen oder Zugangsdaten enthalten —, bleiben diese auf Ihrem Computer und in den Berichten und werden nur an die Server gesendet, auf die dieselben Zeilen verweisen. Wir raten davon ab, solche Daten einzutragen.</p>
+<h3>KOMPONENTEN DRITTER</h3>
+<p>Das Programm enthält die Microsoft-.NET-Laufzeitumgebung, deren Lizenztexte das Programm im Ordner Licenze begleiten. Sie fügt diesem Produkt keine Telemetrie hinzu.</p>
+<h3>VERANTWORTLICHER UND KONTAKT</h3>
+<p>Rosario Viscardi (Vis-K) — <a href="mailto:vis-k@outlook.it">vis-k@outlook.it</a></p>
+<p>© 2026 Vis-K</p>
+</section>
+
+<section id="zh" lang="zh-Hans">
+<h2>隐私政策</h2>
+<p class="versione">SourceMonitor — 版本 1.4.0</p>
+<p>SourceMonitor 不会代表许可方收集或保存任何个人数据，也不会向许可方发送任何数据。在任何配置下，它都不包含遥测，不跟踪使用情况，不需要账户，不显示广告，也不与许可方的任何服务器通信。</p>
+<h3>哪些内容会离开你的电脑</h3>
+<p>SourceMonitor 只连接你提供给它的清单中出现的网址，以及你配置的邮件服务器。除此之外不连接任何地方。</p>
+<ul>
+<li>对清单中的每个网址，程序都会像浏览器一样发出一次普通的网页请求。接收请求的服务器能看到的，与任何网页请求相同：你的网络连接的 IP 地址、时间以及程序的标识（“SourceMonitor/1.0”，可在「计划」选项卡中修改）。这些服务器是哪些由你决定，因为要监控的网址是你选择的；它们如何处理这些信息，适用各自的隐私政策。</li>
+<li>如果你启用了电子邮件提醒，程序会向你指定的邮件服务器发送一份检查摘要：哪些来源有问题、原因是什么。邮件从你的邮箱账户发往你选择的收件人。</li>
+<li>如果你把清单中的文件下载到本地存档，这些文件也来自同样的网址。</li>
+</ul>
+<h3>哪些内容留在你的电脑上</h3>
+<p>程序写入的一切都位于它的工作文件夹（通常是 文档\SourceMonitor）中：设置、检查历史、日志、报告和存档。这些内容不会离开那里。邮件服务器的密码从不以明文保存：它使用 DPAPI（与你的 Windows 账户绑定的机制）加密，其他用户或其他电脑都无法读取。你随时可以通过删除该文件夹来删除全部内容。</p>
+<h3>在 Microsoft Store 购买</h3>
+<p>如果你是在 Microsoft Store 购买的 SourceMonitor，购买和付款数据由 Microsoft 按照其自身的隐私声明处理。许可方不会收到这些数据。</p>
+<h3>清单的内容</h3>
+<p>清单由你编写，可以包含任何内容。如果你在其中写入了个人数据——例如包含姓名或凭据的网址——这些数据会保留在你的电脑和报告中，并且只会发送到这些行本身所指向的服务器。我们建议不要写入此类数据。</p>
+<h3>第三方组件</h3>
+<p>本程序包含 Microsoft .NET 运行时，其许可文本随程序一起位于 Licenze 文件夹中。它不会为本产品添加任何遥测。</p>
+<h3>控制者与联系方式</h3>
+<p>Rosario Viscardi (Vis-K) — <a href="mailto:vis-k@outlook.it">vis-k@outlook.it</a></p>
+<p>© 2026 Vis-K</p>
+</section>
+
+</main>
+</body>
+</html>
 
