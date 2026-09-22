@@ -1,1 +1,161 @@
+---
+---
+
+// Le due righe vuote qui sopra non sono un refuso: senza quel blocco Jekyll non tratta
+// questo file come una sorgente da compilare, e lo serve com'è.
+//
+// L'importazione prende il tema e ci scrive sopra: quello che segue è solo ciò che
+// cambia. Il nome del tema arriva da `_config.yml`: senza quella riga l'importazione è
+// vuota e il foglio non compila — i due file si tengono per mano.
+@import "{{ site.theme }}";
+
+// I colori sono quelli del prodotto, e accanto a ognuno c'è il file da cui vengono: la
+// pagina è l'unico posto che non può leggerli dal codice. **Tema chiaro**, come il
+// pannello e la schermata iniziale di SourceMonitor (EasyJobCall era scuro perché lo è
+// il suo overlay): una pagina che somiglia al programma è una promessa mantenuta.
+:root {
+  --fondo:   #F6F7F9;  // src/SourceMonitor/Themes/Controls.xaml  Bg
+  --riquadro: #FFFFFF; // idem, Panel
+  --testo:   #16191F;  // idem, Text
+  --spento:  #69717D;  // idem, Muted
+  --accento: #1F6FEB;  // idem, Accent — e il blu dell'icona
+  --tenue:   #E8F0FE;  // idem, AccentSoft
+  --bordo:   #DFE3E8;  // idem, Line
+  --titolo:  #0E2A4F;  // Views/SplashWindow.xaml, il nome del programma
+  color-scheme: light;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--fondo);
+  background-image: url("../../sfondo.png");  // generato da tools/make-page.py
+  background-size: cover;
+  background-position: center top;
+  background-attachment: fixed;  // la rete di nodi resta dov'è mentre si scorre
+  background-repeat: no-repeat;
+  color: var(--testo);
+}
+
+// Il riquadro del testo è bianco e appena traslucido: ai lati si continua a vedere la
+// rete di fonti collegate, che è la ragione per cui lo sfondo c'è.
+.markdown-body {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  padding: 2rem 2.25rem;
+  border: 1px solid var(--bordo);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 12px 40px rgba(14, 42, 79, 0.12);
+  color: var(--testo);
+}
+
+// Nessuna riga sotto le intestazioni: sotto il titolo il logo le passerebbe attraverso,
+// sotto i nomi delle lingue diventerebbero sei righe che spezzano la pagina. A separare
+// ci sono i `---` del testo.
+.markdown-body h1,
+.markdown-body h2 {
+  color: var(--titolo);
+  border-bottom: 0;
+}
+
+.markdown-body h1 { margin-bottom: 1.2rem; }
+
+.markdown-body h2 {
+  margin-bottom: 0.3rem;
+  clear: both;  // o il primo nome di lingua si incastrerebbe di fianco al logo
+}
+
+.markdown-body h3 {
+  color: var(--titolo);
+  margin-top: 1.6rem;
+  margin-bottom: 0.4rem;
+  font-size: 1.05rem;
+}
+
+.markdown-body hr {
+  background-color: var(--bordo);
+  clear: both;
+}
+
+// L'occhiello è la frase corta della scheda del negozio: la prima cosa che si legge.
+.markdown-body .occhiello {
+  font-size: 1.15rem;
+  line-height: 1.5;
+}
+
+// La riga in fondo a ogni lingua: negozio, informativa, contratto. «Microsoft Store» e
+// «Privacy» restano uguali in tutte le lingue: si riconoscono senza tradurle.
+.markdown-body .rimandi {
+  margin-top: 1rem;
+  font-weight: 600;
+}
+
+.markdown-body .rimandi .separatore {
+  color: var(--spento);
+  font-weight: 400;
+}
+
+// Il riquadro "che cosa non fa": per un programma che fa richieste in rete a nome
+// dell'utente, dire dove non va è la prima cosa da dire, non una nota in fondo.
+.markdown-body .avvertenza {
+  margin-top: 1rem;
+  padding: 0.7rem 0.95rem;
+  border-left: 3px solid var(--accento);
+  background: var(--tenue);
+  color: var(--testo);
+}
+
+.markdown-body p,
+.markdown-body li,
+.markdown-body strong,
+.markdown-body td,
+.markdown-body th {
+  color: var(--testo);
+}
+
+.markdown-body a { color: var(--accento); }
+
+.markdown-body code {
+  background: var(--tenue);
+}
+
+.markdown-body table tr {
+  background-color: transparent;
+  border-top-color: var(--bordo);
+}
+
+.markdown-body table tr:nth-child(2n) { background-color: rgba(240, 242, 245, 0.7); }
+
+.markdown-body table td,
+.markdown-body table th { border-color: var(--bordo); }
+
+// Il logo è una targa blu su crema, con la sua cornice: su un fondo chiaro si appoggia
+// con un'ombra leggera. Sta di fianco al titolo e non sopra: galleggia a sinistra, e il
+// paragrafo che il Markdown gli costruisce intorno non deve occupare una riga sua.
+.logo-vis-k {
+  float: left;
+  width: 76px;
+  height: auto;
+  margin: 0.2rem 1.1rem 0.6rem 0;
+  box-shadow: 0 4px 16px rgba(14, 42, 79, 0.18);
+}
+
+.markdown-body p:has(> .logo-vis-k) { margin: 0; }
+
+// La schermata sotto l'occhiello: la stessa che apre la scheda del negozio.
+.markdown-body .schermata {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 1rem 0 0.5rem;
+  border: 1px solid var(--bordo);
+  border-radius: 8px;
+}
+
+.markdown-body .lingue {
+  clear: both;  // sotto il logo, non di fianco
+  font-size: 1.05rem;
+  line-height: 2;
+  color: var(--spento);
+}
 
