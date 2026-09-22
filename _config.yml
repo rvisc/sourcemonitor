@@ -1,1 +1,20 @@
+# La pagina pubblica di SourceMonitor — https://rvisc.github.io/sourcemonitor/
+#
+# Tre righe, e nessuna delle tre è estetica per caso (stessa lezione di EasyJobCall).
+
+# Il tema Primer disegna un'intestazione sua sopra il contenuto, ma solo quando il
+# titolo del sito è diverso da quello della pagina. Senza questa riga il titolo del
+# sito sarebbe il nome del repository, «sourcemonitor» in minuscolo, diverso da
+# «SourceMonitor» del README: le intestazioni diventerebbero due.
+title: SourceMonitor
+
+# Finisce nel <meta name="description"> e il tema Primer la attacca anche al titolo
+# della scheda del browser, dopo una barra verticale: per questo è corta. È il
+# sottotitolo del prodotto, lo stesso di setup/prodotto.props.
+description: Tiene d'occhio le fonti da cui dipende il tuo software
+
+# Il tema che GitHub Pages usa già di suo, bloccato: se un giorno il predefinito
+# cambiasse, questa pagina — il cui indirizzo sta nella scheda del negozio e nel campo
+# dell'informativa privacy — non cambierebbe aspetto da sola.
+theme: jekyll-theme-primer
 
